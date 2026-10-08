@@ -5,13 +5,13 @@
 class Resh < Formula
   desc "Context-based replacement for zsh and bash shell history"
   homepage "https://github.com/quanchuen/resh"
-  version "4.0.0"
+  version "4.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/quanchuen/resh/releases/download/v4.0.0/resh_4.0.0_darwin_amd64.tar.gz"
-      sha256 "df5170cc0771c8f48e42632fabc3ee832b58f4cbec30ee930420bc93969e0273"
+      url "https://github.com/quanchuen/resh/releases/download/v4.0.1/resh_4.0.1_darwin_amd64.tar.gz"
+      sha256 "49b4fcf1b9a50eb0794fd48671347f2d88e2e87a3a7f95d1d6434c14a3c977f8"
 
       define_method(:install) do
         libexec.install Dir["*"]
@@ -23,8 +23,8 @@ class Resh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/quanchuen/resh/releases/download/v4.0.0/resh_4.0.0_darwin_arm64.tar.gz"
-      sha256 "f51485b1f4acd08a97c351af7e6c906a92758de1a0d8cd318afecc2c0ccd133f"
+      url "https://github.com/quanchuen/resh/releases/download/v4.0.1/resh_4.0.1_darwin_arm64.tar.gz"
+      sha256 "9d59b31e024af8be59fefa40ac44c31b1ae001b512e1887cc906e42b09169774"
 
       define_method(:install) do
         libexec.install Dir["*"]
@@ -39,8 +39,8 @@ class Resh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quanchuen/resh/releases/download/v4.0.0/resh_4.0.0_linux_amd64.tar.gz"
-      sha256 "96fccb7f7991beb53e650e82f7a57f5862be65b068d260bddd690392ee3d871b"
+      url "https://github.com/quanchuen/resh/releases/download/v4.0.1/resh_4.0.1_linux_amd64.tar.gz"
+      sha256 "8a4398cd832bfd77aa51f9dbed08015cb0c7b2c20012c26ba60939a7b14018b9"
       define_method(:install) do
         libexec.install Dir["*"]
         (bin/"resh-setup").write <<~EOS
@@ -51,8 +51,8 @@ class Resh < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/quanchuen/resh/releases/download/v4.0.0/resh_4.0.0_linux_armv6.tar.gz"
-      sha256 "7f89fb25213dc2aa518250cb2ebb433568b1a35a6190277887bbf98a2d6b9783"
+      url "https://github.com/quanchuen/resh/releases/download/v4.0.1/resh_4.0.1_linux_armv6.tar.gz"
+      sha256 "e6360f4e331c65faf968d08e4c60608a55d4f2cffac964d51fb7809fd58a3e4e"
       define_method(:install) do
         libexec.install Dir["*"]
         (bin/"resh-setup").write <<~EOS
@@ -63,8 +63,8 @@ class Resh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/quanchuen/resh/releases/download/v4.0.0/resh_4.0.0_linux_arm64.tar.gz"
-      sha256 "051779dcb7cfabb41e40d46092b7104dfeea577d19087d54b2fecc8f11ac5175"
+      url "https://github.com/quanchuen/resh/releases/download/v4.0.1/resh_4.0.1_linux_arm64.tar.gz"
+      sha256 "ef392090dbf700436bf86aaaf8438cf2478fce5c4b93209c0032877fe952d402"
       define_method(:install) do
         libexec.install Dir["*"]
         (bin/"resh-setup").write <<~EOS
